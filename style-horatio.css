@@ -1,7 +1,131 @@
 /* UNIVERSAL */
 
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
+}
+
+/* COMMON */
+
+#logo {
+    width: 100px;
+}
+
+#logo img {
+    width: 100%;
+}
+a {
+    text-decoration: none;
+}
+
+.travel_site_wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 90%;
+}
+
+/* HEADER */
+header,
+#logo,
+#navbar {
+    
+}
+
+.header_container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* NAVBAR */
+.links {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.links li {
+    font-size: 24px;
+    font-weight: normal;
+    list-style: none;
+    padding: 0 10px;
+}
+
+.nav_link {
+    color: #000;
+}
+
+.nav_link:focus {
+    color: turquoise;
+}
+
+/* WRAPPER */
+
+.travel_site {
+    width: 100%;
+}
+
+/* SHOWCASE */
+.showcase {
+    
+    display: flex;
+}
+
+.showcase_container {
+    
+    /* display: flex; */
+    margin: auto;
+    position: relative;
+    width: 100%;
+}
+
+.showcase_container img {
+    width: 100%;
+}
+
+/* SHOWCASE CONTENT */
+
+.showcase_content {
+    
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    top: 30%;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+
+.showcase_content h1 {
+    font-size: 60px;
+    font-weight: normal;
+    color: #fff;
+}
+
+/* Search Input */
+.showcase_content .search {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.showcase_content input {
+    border-radius: 8px;
+    margin: auto;
+    padding: 20px 40px 20px;
+    width: 500px;
+    /* position: relative; */
+}
+
+.showcase_content input::placeholder {
+    color: lightgray;
+}
+
+.search img {
+    cursor: pointer;
+    width: 30px;
+    position: relative;
+    right: 80px;
+    top: 10px;
 }
