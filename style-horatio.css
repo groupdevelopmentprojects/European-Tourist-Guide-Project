@@ -6,15 +6,12 @@
     box-sizing: border-box;
 }
 
+body {
+    display: flex;
+}
+
 /* COMMON */
 
-#logo {
-    width: 100px;
-}
-
-#logo img {
-    width: 100%;
-}
 a {
     text-decoration: none;
 }
@@ -27,19 +24,29 @@ a {
 }
 
 /* HEADER */
-header,
-#logo,
-#navbar {
-    
-}
 
 .header_container {
     display: flex;
+    height: 80px;
     justify-content: space-around;
     align-items: center;
+    margin: auto;
+}
+
+#logo {
+    width: 25%;
+    text-align: center;
+}
+
+#logo img {
+    width: 140px;
 }
 
 /* NAVBAR */
+#navbar {
+    width: 75%;
+}
+
 .links {
     display: flex;
     justify-content: space-evenly;
@@ -49,7 +56,7 @@ header,
     font-size: 24px;
     font-weight: normal;
     list-style: none;
-    padding: 0 10px;
+    padding: 10px;
 }
 
 .nav_link {
@@ -62,43 +69,42 @@ header,
 
 /* WRAPPER */
 
-.travel_site {
+.travel_site,
+.showcase_container {
     width: 100%;
 }
 
 /* SHOWCASE */
-.showcase {
-    
-    display: flex;
-}
 
 .showcase_container {
-    
-    /* display: flex; */
-    margin: auto;
-    position: relative;
-    width: 100%;
+    padding-bottom: 0;
 }
 
-.showcase_container img {
+.showcase {
+    /* tbd */
+    display: flex;
+    position: relative;
+}
+
+.showcase img {
     width: 100%;
 }
 
 /* SHOWCASE CONTENT */
 
 .showcase_content {
-    
     display: flex;
     flex-direction: column;
     text-align: center;
-    top: 30%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     position: absolute;
     width: 100%;
-    z-index: 1;
 }
 
 .showcase_content h1 {
-    font-size: 60px;
+    font-size: 80px;
     font-weight: normal;
     color: #fff;
 }
@@ -111,15 +117,16 @@ header,
 }
 
 .showcase_content input {
+    border: none;
     border-radius: 8px;
     margin: auto;
-    padding: 20px 40px 20px;
+    padding: 20px 30px 20px;
     width: 500px;
-    /* position: relative; */
 }
 
 .showcase_content input::placeholder {
     color: lightgray;
+    font-size: 18px;
 }
 
 .search img {
@@ -128,4 +135,15 @@ header,
     position: relative;
     right: 80px;
     top: 10px;
+}
+
+.mouse {
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute; 
+}
+
+.mouse img {
+    width: 20px;
 }
