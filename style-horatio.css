@@ -16,6 +16,8 @@ a {
     text-decoration: none;
 }
 
+/* WRAPPER */
+
 .travel_site_wrapper {
     display: flex;
     flex-direction: column;
@@ -23,9 +25,26 @@ a {
     width: 90%;
 }
 
-/* HEADER */
+/* CONTAINER */
+.travel_site,
+.showcase_container,
+.natural_wonders_container {
+    border: 1px dotted purple;
+    width: 100%;
+}
+
+
+/* #########################################################################
+HEADER
+######################################################################### */
+header,
+#logo,
+#navbar {
+    border: 1px dotted red;
+}
 
 .header_container {
+    border: 1px dotted red;
     display: flex;
     height: 80px;
     justify-content: space-around;
@@ -67,21 +86,20 @@ a {
     color: turquoise;
 }
 
-/* WRAPPER */
 
-.travel_site,
-.showcase_container {
-    width: 100%;
-}
 
-/* SHOWCASE */
+/* #########################################################################
+SHOWCASE
+######################################################################### */
 
 .showcase_container {
+    border: 1px dotted yellow;
     padding-bottom: 0;
 }
 
 .showcase {
     /* tbd */
+    border: 1px dotted green;
     display: flex;
     position: relative;
 }
@@ -93,6 +111,7 @@ a {
 /* SHOWCASE CONTENT */
 
 .showcase_content {
+    border: 1px dotted purple;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -138,6 +157,7 @@ a {
 }
 
 .mouse {
+    border: 1px dotted green;
     bottom: 30px;
     left: 50%;
     transform: translate(-50%);
@@ -146,4 +166,50 @@ a {
 
 .mouse img {
     width: 20px;
+}
+
+
+/* #########################################################################
+NATURAL WONDERS
+######################################################################### */
+
+#natural_wonders_container {
+    border: 1px dotted green;
+}
+
+.natural_wonders {
+    margin: auto;
+    padding-top: 10px;
+    text-align: center;
+    /* width: 100%; */
+}
+
+/* Natural Wonders Slide */
+
+.natural_wonders_slides {
+    border: 1px dotted red;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    /* margin: 5px;
+    padding: 15px;     */
+}
+
+.natural_wonders_slides .wonders_img {
+    border: 1px dotted yellow;
+    margin: 10px;
+}
+
+.natural_wonders_slides .wonders_img:hover {
+    cursor: pointer;
+    transform: scale(1.4);
+    border: 1px dotted yellow;
+}
+
+.natural_wonders_slides .wonders_img  img {
+    width: 100%;
+}
+
+.natural_wonders_slides .wonders_img p {
+    text-transform: capitalize;
 }
