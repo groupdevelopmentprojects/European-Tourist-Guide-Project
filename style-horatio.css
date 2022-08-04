@@ -29,7 +29,6 @@ a {
 .travel_site,
 .showcase_container,
 .natural_wonders_container {
-    border: 1px dotted purple;
     width: 100%;
 }
 
@@ -40,11 +39,9 @@ HEADER
 header,
 #logo,
 #navbar {
-    border: 1px dotted red;
 }
 
 .header_container {
-    border: 1px dotted red;
     display: flex;
     height: 80px;
     justify-content: space-around;
@@ -93,13 +90,11 @@ SHOWCASE
 ######################################################################### */
 
 .showcase_container {
-    border: 1px dotted yellow;
     padding-bottom: 0;
 }
 
 .showcase {
     /* tbd */
-    border: 1px dotted green;
     display: flex;
     position: relative;
 }
@@ -111,7 +106,6 @@ SHOWCASE
 /* SHOWCASE CONTENT */
 
 .showcase_content {
-    border: 1px dotted purple;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -157,7 +151,6 @@ SHOWCASE
 }
 
 .mouse {
-    border: 1px dotted green;
     bottom: 30px;
     left: 50%;
     transform: translate(-50%);
@@ -174,7 +167,6 @@ NATURAL WONDERS
 ######################################################################### */
 
 #natural_wonders_container {
-    border: 1px dotted green;
 }
 
 .natural_wonders {
@@ -187,7 +179,6 @@ NATURAL WONDERS
 /* Natural Wonders Slide */
 
 .natural_wonders_slides {
-    border: 1px dotted red;
     display: flex;
     justify-content: space-evenly;
     margin-top: 20px;
@@ -196,14 +187,12 @@ NATURAL WONDERS
 }
 
 .natural_wonders_slides .wonders_img {
-    border: 1px dotted yellow;
     margin: 10px;
 }
 
 .natural_wonders_slides .wonders_img:hover {
     cursor: pointer;
     transform: scale(1.4);
-    border: 1px dotted yellow;
 }
 
 .natural_wonders_slides .wonders_img  img {
