@@ -19,16 +19,15 @@ a {
 /* WRAPPER */
 
 .travel_site_wrapper {
-    display: flex;
-    flex-direction: column;
     margin: auto;
-    width: 90%;
+    width: 1200px;
 }
 
 /* CONTAINER */
 .travel_site,
 .showcase_container,
-.natural_wonders_container {
+.natural_wonders_container,
+.tourist_attractions_container {
     width: 100%;
 }
 
@@ -65,14 +64,13 @@ header,
 
 .links {
     display: flex;
-    justify-content: space-evenly;
 }
 
 .links li {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: normal;
     list-style: none;
-    padding: 10px;
+    margin: auto;
 }
 
 .nav_link {
@@ -94,9 +92,9 @@ SHOWCASE
 }
 
 .showcase {
-    /* tbd */
     display: flex;
     position: relative;
+    margin: auto;
 }
 
 .showcase img {
@@ -166,14 +164,13 @@ SHOWCASE
 NATURAL WONDERS
 ######################################################################### */
 
-#natural_wonders_container {
+.natural_wonders_container {
 }
 
 .natural_wonders {
     margin: auto;
     padding-top: 10px;
     text-align: center;
-    /* width: 100%; */
 }
 
 /* Natural Wonders Slide */
@@ -182,8 +179,6 @@ NATURAL WONDERS
     display: flex;
     justify-content: space-evenly;
     margin-top: 20px;
-    /* margin: 5px;
-    padding: 15px;     */
 }
 
 .natural_wonders_slides .wonders_img {
@@ -201,4 +196,68 @@ NATURAL WONDERS
 
 .natural_wonders_slides .wonders_img p {
     text-transform: capitalize;
+}
+
+/* #########################################################################
+TOURIST ATTRACTIONS
+######################################################################### */
+.tourist_attractions_container {
+}
+
+/* Heading */
+.tourist_attractions {
+    margin: auto;
+    padding-top: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.tourist_attractions_cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 10px;
+    margin: 20px;
+    padding: 0;
+}
+
+.attractions_card {
+}
+
+/* Cards */
+.attractions_card .card_img  {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    margin: auto;
+    transition: 0.3s;
+    position: relative;
+    width: 90%;
+
+}
+
+.card_img > img {
+    width: 100%;
+}
+
+.card_img .like {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* Text */
+.card_img_text {
+    text-align: left;
+    padding: 10px;
+    margin: 20px;
+}
+
+.card_img_text h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card_img_text p {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    width: 100%;
 }
