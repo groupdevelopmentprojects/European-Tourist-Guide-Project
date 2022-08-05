@@ -27,7 +27,9 @@ a {
 .travel_site,
 .showcase_container,
 .natural_wonders_container,
-.tourist_attractions_container {
+.tourist_attractions_container,
+.video_container,
+.newsletter_container {
     width: 100%;
 }
 
@@ -260,4 +262,48 @@ TOURIST ATTRACTIONS
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     width: 100%;
+}
+
+/* #########################################################################
+VIDEO
+######################################################################### */
+
+.video_container {
+}
+
+/* Video: Background */
+.video_container .video_bg {
+    position: relative;
+}
+
+.video_bg > img {
+    width: 100%;
+}
+
+/* Video: Top */
+.video_top {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+
+/* Text */
+.video_top_text {
+    font-family: 'Raleway' sans-serif;
+    color: #fff;
+    text-align: center;
+}
+
+.video_top_text p {
+    font-family: 'Raleway' sans-serif;
+    font-size: 24px;
+}
+
+.video_top > img {
+    border-bottom: 3px solid turquoise;
+    cursor: pointer;
+    width: 100%;
+    padding-bottom: 0;
 }
