@@ -1,4 +1,116 @@
 *{
     margin: 0;
     padding: 0;
+    font-size: 1rem;
+}
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+nav .left-nav {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+nav .left-nav img {
+    width: 28%;
+}
+nav .right-nav {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+}
+nav .right-nav a {
+    text-decoration: none;
+    color: black;
+}
+nav .right-nav a:hover {
+    color: aqua;
+}
+
+main img {
+    width: 100%;
+}
+main {
+    position: relative;
+}
+main .search {
+    position: absolute;
+    top: 42%;
+    left: 30%;
+    width: 39%;
+    
+    
+    
+
+}
+main .search form input {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.8rem;
+}
+main .search form {
+    display: flex;
+    align-items: center;
+}
+main p {
+    position: absolute;
+    
+    top: 27%;
+    font-size: 3.5rem;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+main .search img {
+    width: 7%;
+    position: absolute;
+    right: 3%;
+}
+main .mouse {
+    width: 100%;
+    bottom: 8%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+
+}
+main .mouse img {
+    width: 2%;
+}
+.mid .grid {
+    display: grid;
+    place-items: center;
+    padding: 0 3%;
+    grid-template-columns: repeat(auto-fit,minmax(550px,1fr));
+    grid-gap: 1rem;
+}
+.mid .grid .card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.mid .grid .card .image-container img {
+    width: 100%;
+}
+.mid .grid .card .image-container {
+    width: 100%;
+    position: relative;
+}
+.mid .grid .card .image-container .like {
+    position: absolute;
+    width: 7%;
+    right: 1%;
+    top: 3%;
+}
+.mid .grid .card .image-container .like img {
+    width: 100%;
+}
+.mid .grid .card .description {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    padding: 1% 2%
 }
