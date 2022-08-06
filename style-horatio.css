@@ -7,7 +7,7 @@
 }
 
 body {
-    display: flex;
+    /* display: flex; */
 }
 
 /* COMMON */
@@ -16,11 +16,19 @@ a {
     text-decoration: none;
 }
 
+/* Section Header Text */
+.natural_wonders h2,
+.tourist_attractions h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+}
+
 /* WRAPPER */
 
 .travel_site_wrapper {
     margin: auto;
-    width: 1200px;
+    max-width: 1200px;
 }
 
 /* CONTAINER */
@@ -69,18 +77,19 @@ header,
 }
 
 .links li {
-    font-size: 20px;
-    font-weight: normal;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
     list-style: none;
     margin: auto;
 }
 
 .nav_link {
-    color: #000;
+    color: #303134;
 }
 
 .nav_link:focus {
-    color: turquoise;
+    color: #67DCDA;
 }
 
 
@@ -91,15 +100,15 @@ SHOWCASE
 
 .showcase_container {
     padding-bottom: 0;
+    position: relative;
 }
 
 .showcase {
     display: flex;
-    position: relative;
     margin: auto;
 }
 
-.showcase img {
+.showcase .banner_img {
     width: 100%;
 }
 
@@ -111,47 +120,52 @@ SHOWCASE
     text-align: center;
     top: 50%;
     left: 50%;
+    margin-bottom: 15px;
     transform: translate(-50%, -50%);
     position: absolute;
     width: 100%;
 }
 
 .showcase_content h1 {
-    font-size: 80px;
-    font-weight: normal;
+    font-family: 'Coolvetica', sans-serif;
+    font-size: 75px;
+    font-weight: 400;
     color: #fff;
+    margin-bottom: 10px;
 }
 
 /* Search Input */
 .showcase_content .search {
-    margin-bottom: 10px;
-    margin-top: 10px;
+    margin: auto;
     width: 100%;
 }
 
-.showcase_content input {
+.showcase_content .search_input {
     border: none;
     border-radius: 8px;
-    margin: auto;
+    line-height: 20px;
     padding: 20px 30px 20px;
-    width: 500px;
+    position: relative;
+    width: 640px;
 }
 
 .showcase_content input::placeholder {
-    color: lightgray;
-    font-size: 18px;
+    color: #a5a5a5;
+    font-family: 'Raleway', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
 }
 
-.search img {
+.search .search_icon {
     cursor: pointer;
     width: 30px;
     position: relative;
-    right: 80px;
+    right: 90px;
     top: 10px;
 }
 
 .mouse {
-    bottom: 30px;
+    bottom: 15px;
     left: 50%;
     transform: translate(-50%);
     position: absolute; 
@@ -174,6 +188,7 @@ NATURAL WONDERS
     padding-top: 10px;
     text-align: center;
 }
+
 
 /* Natural Wonders Slide */
 
@@ -218,8 +233,10 @@ TOURIST ATTRACTIONS
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-gap: 10px;
-    margin: 20px;
-    padding: 0;
+    margin: auto;
+    margin-top: 20px;
+    max-width: 1200px;
+    padding: 1rem;
 }
 
 .attractions_card {
@@ -229,10 +246,9 @@ TOURIST ATTRACTIONS
 .attractions_card .card_img  {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     margin: auto;
+    height: 600px;
     transition: 0.3s;
     position: relative;
-    width: 90%;
-
 }
 
 .card_img > img {
@@ -254,13 +270,16 @@ TOURIST ATTRACTIONS
 
 .card_img_text h2 {
     font-family: 'Raleway', sans-serif;
+    font-size: 23px;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
 .card_img_text p {
     font-family: 'Raleway', sans-serif;
-    font-weight: 700;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 20px;
     width: 100%;
 }
 
@@ -269,21 +288,23 @@ VIDEO
 ######################################################################### */
 
 .video_container {
+    height: 500px;
+    position: relative;
 }
 
 /* Video: Background */
 .video_container .video_bg {
-    position: relative;
 }
 
-.video_bg > img {
-    width: 100%;
+.video_bg .bg_img {
+    height: 500px;
+    max-width: 100%;
 }
 
 /* Video: Top */
 .video_top {
-    left: 50%;
     top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     position: absolute;
 }
@@ -291,19 +312,105 @@ VIDEO
 
 /* Text */
 .video_top_text {
-    font-family: 'Raleway' sans-serif;
+    font-family: 'Raleway', sans-serif;
     color: #fff;
     text-align: center;
 }
 
+.video_top_text h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 37px;
+    text-transform: uppercase;
+}
 .video_top_text p {
-    font-family: 'Raleway' sans-serif;
-    font-size: 24px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 37px;
 }
 
-.video_top > img {
-    border-bottom: 3px solid turquoise;
+.video_top .top_img {
+    border-bottom: 3px solid #67DCDA;
     cursor: pointer;
     width: 100%;
     padding-bottom: 0;
 }
+
+/* #########################################################################
+NEWSLETTER
+######################################################################### */
+
+.newsletter_container {
+    position: relative;
+}
+
+.newsletter {
+}
+
+.newsletter img {
+    width: 100%;
+}
+
+/* Text */
+.newsletter_text {
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 580px;
+    position: absolute;
+}
+
+.newsletter_text h3 {
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 37px;
+}
+
+.newsletter_text p {
+    font-weight: 500;
+    line-height: 37px;
+    padding: 10px 0;
+}
+
+/* Input */
+.newsletter_input {
+}
+
+.newsletter_input input{
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 500px;
+    line-height: 37px;
+    margin-right: 5px;
+    padding-left: 20px;
+    width: 400px;
+}
+
+.newsletter_input input::placeholder {
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+/* Subscribe Button */
+
+.newsletter_input .subscribe {
+    background-color: #fff;
+    border: #fff;
+    color: #08AEEA;
+    cursor: pointer;
+    border-radius: 500px;
+    line-height: 37px;
+    margin-left: 5px;
+    text-transform: uppercase;
+    width: 160px;
+}
+/* #########################################################################
+FOOTER
+######################################################################### */
