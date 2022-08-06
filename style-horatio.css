@@ -37,7 +37,8 @@ a {
 .natural_wonders_container,
 .tourist_attractions_container,
 .video_container,
-.newsletter_container {
+.newsletter_container,
+.map_container {
     width: 100%;
 }
 
@@ -104,6 +105,7 @@ SHOWCASE
 }
 
 .showcase {
+    /* tbd */
     display: flex;
     margin: auto;
 }
@@ -411,6 +413,16 @@ NEWSLETTER
     text-transform: uppercase;
     width: 160px;
 }
+/* #########################################################################
+MAP
+######################################################################### */
+.map_container {
+}
+
+.map img {
+    width: 100%;
+}
+
 /* #########################################################################
 FOOTER
 ######################################################################### */
