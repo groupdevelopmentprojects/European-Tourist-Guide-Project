@@ -38,7 +38,8 @@ a {
 .tourist_attractions_container,
 .video_container,
 .newsletter_container,
-.map_container {
+.map_container,
+.contact_footer_container {
     width: 100%;
 }
 
@@ -101,13 +102,14 @@ SHOWCASE
 
 .showcase_container {
     padding-bottom: 0;
-    position: relative;
+    /* position: relative; */
 }
 
 .showcase {
     /* tbd */
     display: flex;
     margin: auto;
+    position: relative;
 }
 
 .showcase .banner_img {
@@ -139,16 +141,16 @@ SHOWCASE
 /* Search Input */
 .showcase_content .search {
     margin: auto;
-    width: 100%;
+    position: relative;
+    width: 50%;
 }
 
-.showcase_content .search_input {
+.showcase_content .search .search_input {
     border: none;
     border-radius: 8px;
     line-height: 20px;
     padding: 20px 30px 20px;
-    position: relative;
-    width: 640px;
+    width: 100%;
 }
 
 .showcase_content input::placeholder {
@@ -158,17 +160,18 @@ SHOWCASE
     font-weight: 400;
 }
 
-.search .search_icon {
+.search_icon {    
     cursor: pointer;
     width: 30px;
-    position: relative;
-    right: 90px;
-    top: 10px;
+    position: absolute;
+    right: 30px;
+    bottom: 18px;
 }
 
 .mouse {
-    bottom: 15px;
     left: 50%;
+    bottom: 0;
+    padding-bottom: 10px;
     transform: translate(-50%);
     position: absolute; 
 }
@@ -426,3 +429,97 @@ MAP
 /* #########################################################################
 FOOTER
 ######################################################################### */
+
+/* Contact Footer */
+.contact_footer_container {
+    background-color: #141418;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.contact_footer_container .quick_links h4,
+.contact_footer_container .contact_address h4 {
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Quick Links */
+.quick_links {
+    line-height: 40px;
+    margin-left: 20px;
+}
+
+.quick_links .page_links li {
+    list-style: none;
+}
+
+.quick_links .page_links li a {
+    color: #fff;
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+/* Address */
+.contact_address {
+    line-height: 40px;
+    margin-left: 10px;
+}
+
+.contact_address address {
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Newsletter Email */
+.newsletter_email {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    width: 300px;
+    position: relative;
+    height: 85px;
+    margin-right: 0;
+    margin-top: 40px;
+}
+
+.newsletter_email p {
+    font-size: 15px;
+}
+.newsletter_email input {
+    line-height: 34px;
+    margin-top: 20px;
+    width: 100%;
+}
+/* arrow */
+.newsletter_email .arrow  {
+    position: absolute;
+    width: 40px;
+    right: 2px;
+    top: 42px;
+}
+
+.newsletter_email input::placeholder {
+    color: #353030;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    padding-left: 10px;
+}
+/* Site Footer */
+footer {
+    color: #fff;
+    border-top: 1px solid #e8e8e8;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    align-content: center;
+    padding: 20px 0;
+}
