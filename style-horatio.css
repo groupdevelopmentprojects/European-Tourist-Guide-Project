@@ -28,6 +28,7 @@ a {
 
 .travel_site_wrapper {
     margin: auto;
+    width: 100%;
 }
 
 /* CONTAINER */
@@ -141,7 +142,7 @@ SHOWCASE
 .showcase_content .search {
     margin: auto;
     position: relative;
-    width: 50%;
+    width: 43%;
 }
 
 .showcase_content .search .search_input {
