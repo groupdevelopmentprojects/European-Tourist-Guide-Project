@@ -46,10 +46,6 @@ a {
 /* #########################################################################
 HEADER
 ######################################################################### */
-header,
-#logo,
-#navbar {
-}
 
 .header_container {
     display: flex;
@@ -183,8 +179,6 @@ SHOWCASE
 NATURAL WONDERS
 ######################################################################### */
 
-.natural_wonders_container {
-}
 
 .natural_wonders {    
     margin: auto;
@@ -221,8 +215,6 @@ NATURAL WONDERS
 /* #########################################################################
 TOURIST ATTRACTIONS
 ######################################################################### */
-.tourist_attractions_container {
-}
 
 /* Heading */
 .tourist_attractions {
@@ -242,8 +234,6 @@ TOURIST ATTRACTIONS
     padding: 1rem;
 }
 
-.attractions_card {
-}
 
 /* Cards */
 .attractions_card .card_img  {
@@ -296,8 +286,6 @@ VIDEO
 }
 
 /* Video: Background */
-.video_container .video_bg {
-}
 
 .video_bg .bg_img {
     height: 500px;
@@ -349,8 +337,6 @@ NEWSLETTER
     position: relative;
 }
 
-.newsletter {
-}
 
 .newsletter img {
     width: 100%;
@@ -381,8 +367,6 @@ NEWSLETTER
 }
 
 /* Input */
-.newsletter_input {
-}
 
 .newsletter_input input{
     background-color: transparent;
@@ -417,8 +401,6 @@ NEWSLETTER
 /* #########################################################################
 MAP
 ######################################################################### */
-.map_container {
-}
 
 .map img {
     width: 100%;
@@ -533,11 +515,7 @@ TRAVEL SITE: DETAILS PAGE
 DETAILS: SHOWCASE
 ######################################################################### */
 
-.details_showcase_container {
-}
-
 .details_showcase {
-    /* tbd */
     display: flex;
     position: relative;
 }
@@ -549,8 +527,7 @@ DETAILS: SHOWCASE
 /* DETAILS SHOWCASE CONTENT */
 
 .details_showcase_content {
-    width: 100%;
-    /* width: 842px; */
+    width: 70%;
     bottom: 20px;
     right: 40px;
     position: absolute;
@@ -561,7 +538,7 @@ DETAILS: SHOWCASE
 .details_showcase .showcase_images {
     display: flex;
     justify-content: end;
-    /* width: 100%; */
+    width: 100%;
 }
 .details_showcase .showcase_images .location_img:nth-child(odd) {
     margin: 0 20px;
@@ -577,6 +554,7 @@ DETAILS: SHOWCASE
 
 .showcase_images img {
     cursor: pointer;
+    width: 100%;
 }
 
 
@@ -586,8 +564,6 @@ DETAILS: SHOWCASE
 DETAILS: DESCRIPTION
 ######################################################################### */
 
-.details_description_container {
-}
 
 .details_description {
     margin: auto;
