@@ -28,7 +28,6 @@ a {
 
 .travel_site_wrapper {
     margin: auto;
-    width: 100%;
 }
 
 /* CONTAINER */
@@ -152,7 +151,6 @@ SHOWCASE
     padding: 20px 30px 20px;
     width: 100%;
 }
-
 .showcase_content input::placeholder {
     color: #a5a5a5;
     font-family: 'Raleway', sans-serif;
@@ -188,7 +186,7 @@ NATURAL WONDERS
 .natural_wonders_container {
 }
 
-.natural_wonders {
+.natural_wonders {    
     margin: auto;
     padding-top: 10px;
     text-align: center;
@@ -495,12 +493,13 @@ FOOTER
     margin-top: 20px;
     width: 100%;
 }
+
 /* arrow */
 .newsletter_email .arrow  {
     position: absolute;
     width: 40px;
     right: 2px;
-    top: 42px;
+    top: 40px;
 }
 
 .newsletter_email input::placeholder {
@@ -523,3 +522,107 @@ footer {
     align-content: center;
     padding: 20px 0;
 }
+
+
+
+/* #########################################################################
+TRAVEL SITE: DETAILS PAGE
+######################################################################### */
+
+/* #########################################################################
+DETAILS: SHOWCASE
+######################################################################### */
+
+.details_showcase_container {
+}
+
+.details_showcase {
+    /* tbd */
+    display: flex;
+    position: relative;
+}
+
+.details_showcase .single_banner_img {
+    width: 100%;
+}
+
+/* DETAILS SHOWCASE CONTENT */
+
+.details_showcase_content {
+    width: 100%;
+    /* width: 842px; */
+    bottom: 20px;
+    right: 40px;
+    position: absolute;
+    text-align: center;
+}
+
+/* Images Container */
+.details_showcase .showcase_images {
+    display: flex;
+    justify-content: end;
+    /* width: 100%; */
+}
+.details_showcase .showcase_images .location_img:nth-child(odd) {
+    margin: 0 20px;
+}
+
+/* Images */
+.details_showcase_content .arrow_img {
+    align-self: end;
+    height: 24px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.showcase_images img {
+    cursor: pointer;
+}
+
+
+
+
+/* #########################################################################
+DETAILS: DESCRIPTION
+######################################################################### */
+
+.details_description_container {
+}
+
+.details_description {
+    margin: auto;
+    max-width: 1200px;
+    padding-bottom: 20px;
+}
+
+/* Heading */
+.details_description .title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 30px;
+    margin: 20px 0;
+}
+
+/* Text */
+.details_description_text p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+/* #########################################################################
+DETAILS: MAP
+######################################################################### */
+
+.details_map_container {
+    width: 100%;
+}
+
+.details_map img {
+    width: 100%;
+}
+
+/* #########################################################################
+DETAILS: FOOTER
+######################################################################### */
