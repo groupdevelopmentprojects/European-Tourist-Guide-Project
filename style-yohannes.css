@@ -57,6 +57,7 @@ main p {
   display: flex;
   width: 100%;
   justify-content: center;
+  color: white;
 }
 main .search img {
   width: 7%;
@@ -204,8 +205,8 @@ main .mouse img {
 }
 .discount_offer .email{
     position: absolute;
-    top: 46%;
-    left: 30%;
+    top: 25%;
+    left: 32%;
     width: 60%;
 }
 .discount_offer .email input{
@@ -228,6 +229,49 @@ main .mouse img {
     background-color: white;
 }
 .discount_offer .map img{
-    position: absolute;
-    height: 100%;
+    height: 50vh;
+}
+.last_sec{
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    padding: 2% 0%;
+}
+.last_sec .quick_link{
+    color: white;
+    line-height: 32px;
+}
+.last_sec .quick_link p{
+    font-weight: bold;
+}
+.last_sec .quick_link a{
+    color: white;
+    text-decoration: none;
+}
+.last_sec .address {
+    color: white;
+    line-height: 32px;
+}
+.last_sec .address .address_bold{
+    font-weight: bold;
+}
+.last_sec .newsletter{
+    color: white;
+    width: 25%;
+}
+.last_sec .newsletter form{
+    display: flex;
+    padding: 5% 0%;
+}
+.last_sec .newsletter form input{
+    padding: 0% 5%;
+}
+footer{
+    background-color: black;
+    padding: 1.5vw 0vw;
+    border-top: white solid 1px;
+}
+footer .bottom p{
+    color: white;
+    text-align: center;
 }
