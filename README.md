@@ -8,7 +8,7 @@ Forum App, with a frontend built in React & Redux and a backend built in Django 
 
 **This App uses a Heroku free plan, so I am afraid that it takes time to load the pages.**
 
-Check out [FRONTEND LIVE DEMO](https://forum-prod-frontend.herokuapp.com/) here!!
+Check out [FRONTEND LIVE DEMO](https://european-tourist-guide.herokuapp.com/) here!!
 
 Check out [API LIVE DEMO](https://forum-prod-api.herokuapp.com/) here!!
 
@@ -21,10 +21,10 @@ Check out [API LIVE DEMO](https://forum-prod-api.herokuapp.com/) here!!
 
 ## How to Install
 
-1. Git Clone
+1. Git Clone https://github.com/groupdevelopmentprojects/European-Tourist-Guide-Project
 
 ```
-git clone git@github.com:Tech-i-s/techis-wd-forum-django-react.git
+git clone 
 ```
 
 2. Backend setting
