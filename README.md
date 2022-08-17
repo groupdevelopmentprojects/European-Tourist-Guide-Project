@@ -6,11 +6,13 @@ Forum App, with a frontend built in React & Redux and a backend built in Django 
 
 ## Live Demo
 
+![Screenshot 2022-08-17 at 10 05 41 PM](https://user-images.githubusercontent.com/106568442/185194634-55257ab5-4104-42d0-8bca-e1fb7f2171ba.png)
+
 **This App uses a Heroku free plan, so I am afraid that it takes time to load the pages.**
 
 Check out [FRONTEND LIVE DEMO](https://european-tourist-guide.herokuapp.com/) here!!
 
-Check out [API LIVE DEMO](https://forum-prod-api.herokuapp.com/) here!!
+Check out [API LIVE DEMO](https://europeantrips-backend1.herokuapp.com) here!!
 
 ## Tech used
 
