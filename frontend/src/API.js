@@ -1,12 +1,12 @@
 import axios from 'axios';
-const LOGIN_USER_KEY = 'WD_FORUM_LOGIN_USER_KEY';
+// const LOGIN_USER_KEY = 'WD_FORUM_LOGIN_USER_KEY';
 
 var baseURL;
-if (process.env.REACT_APP_ENVIRONMENT && process.env.REACT_APP_ENVIRONMENT === 'PRODUCTION') {
-    baseURL = process.env.REACT_APP_API_BASE_URL;
-} else {
-    baseURL = 'http://127.0.0.1:8000';
-}
+// if (process.env.REACT_APP_ENVIRONMENT && process.env.REACT_APP_ENVIRONMENT === 'PRODUCTION') {
+//     baseURL = process.env.REACT_APP_API_BASE_URL;
+// } else {
+//     baseURL = 'http://127.0.0.1:8000';
+// }
 
 const api = axios.create({
     baseURL: baseURL,
@@ -32,33 +32,39 @@ api.interceptors.request.use(
 );
 
 export default class API {
-    getPosts = async params => {
-        try {
-            const response = await api.get('/posts/', { params });
-            return response.data;
-        } catch (error) {
-            throw new Error(error);
-        }
+    getPlaces = async (search, category) => {
+      let url = "/places/";
+      let query = new URLSearchParams();
+      if (search) {
+        query.append("search", search);
+      }
+      if (category) {
+        query.append("category", category);
+      }
+  
+      if (query.toString() != "") {
+        url += "?" + query.toString();
+      }
+  
+      const places = await api
+        .get(url)
+        .then((response) => {
+          return response.data;
+        })
+        .catch((error) => {
+          throw new Error(error);
+        });
+      return places;
     };
-    addPost = async postBody => {
-        const formData = new FormData();
-
-        for (const key in postBody) {
-            formData.append(key, postBody[key]);
-        }
-
-        try {
-            const response = await api.post('/posts/add/', formData);
-            return response.data;
-        } catch (error) {
-            throw new Error(error);
-        }
+    getCategories = async () => {
+      const categories = await api
+        .get("/categories/")
+        .then((response) => {
+          return response.data;
+        })
+        .catch((error) => {
+          throw new Error(error);
+        });
+      return categories;
     };
-    deletePost = async id => {
-        try {
-            return await api.delete(`/posts/delete/${id}/`);
-        } catch (error) {
-            throw new Error(error);
-        }
-    };
-}
+  }

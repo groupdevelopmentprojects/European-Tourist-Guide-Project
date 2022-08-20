@@ -1,26 +1,35 @@
 import {
   applyMiddleware,
   combineReducers,
-  createStore as configureStore,
+  createStore as reduxCreateStore,
+  compose
 } from 'redux';
-import { composeWithDevTools } from 'redux-devtools-extension';
-import { logger } from 'redux-logger';
+// 
+import {connectRouter, routerMiddleware} from 'connected-react-router';
 import thunk from 'redux-thunk';
 
 import { PostsReducer } from '../posts/reducers';
+// Import reducers
+import { CategoriesReducer } from '../categories/reducers';
+import { FavouritesReducer } from '../favourites/reducers';
+import { PlacesReducer } from '../places/reducers';
 
-const rootReducer = combineReducers({
-  posts: PostsReducer,
-});
+export default function createStore(history) {
+  return reduxCreateStore(
+    combineReducers({
+      router: connectRouter(history),
+      places: PlacesReducer,
+      categories: CategoriesReducer,
+      favourites: FavouritesReducer,
+    }),
+    compose(
+      applyMiddleware(
+        routerMiddleware(history),
+        thunk
+      ),
+      // DEBUG MODE
+      // window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 
-export default function configureStores(preloadedState) {
-  const middlewares = [logger, thunk];
-  const middlewareEnhancer = applyMiddleware(...middlewares);
-
-  const enhancers = [middlewareEnhancer];
-  const composedEnhancers = composeWithDevTools(...enhancers);
-
-  const store = configureStore(rootReducer, preloadedState, composedEnhancers);
-
-  return store;
+    )
+  )
 }

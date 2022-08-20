@@ -1,141 +1,601 @@
-/*
-Common
-************************************/
+/* UNIVERSAL */
 
-html,
-body {
-    height: 100%;
-    font-family: sans-serif;
-}
-
-.content {
-    width: 600px;
-    height: 100%;
-    margin: 0 auto;
-    border-left: 1px solid #ccc;
-    border-right: 1px solid #ccc;
-}
-
-@media screen and (max-width: 500px) {
-}
-
-/*
-Posts
-************************************/
-
-.post_form {
-    padding: 20px;
-    border-bottom: 1px solid #ccc;
-}
-
-.post_form input {
-    width: 96%;
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-}
-
-.post_form textarea {
-    width: 96%;
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-}
-
-.post_form .upload-area {
-    width: 96%;
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    text-align: center;
-}
-
-.post_form button {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    cursor: pointer;
-}
-
-.upload-image {
-    width: 50%;
-}
-
-.posts ul {
+* {
     padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-.posts li {
-    position: relative;
-    display: flex;
-    border-bottom: 1px solid #ccc;
-    padding: 20px 40px;
-    list-style: none;
-}
 
-.posts li .menu_icon {
-    width: 20px;
-    height: 20px;
-    position: absolute;
-    right: 30px;
-    top: 18px;
-    cursor: pointer;
-}
+/* COMMON */
 
-.posts li .menu {
-    position: absolute;
-    top: 40px;
-    right: 15px;
-    border: 1px solid #ccc;
-    background-color: white;
-    padding: 10px 15px;
-    font-size: 13px;
-    border-radius: 3px;
-    cursor: pointer;
-}
-
-.posts li img {
-    width: 100%;
-}
-
-.posts li .menu a {
+a {
     text-decoration: none;
 }
 
-.posts li .logo {
-    flex-basis: 15%;
+/* Section Header Text */
+.natural_wonders h2,
+.tourist_attractions h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
 }
 
-.posts li .logo img {
-    width: 60%;
+/* WRAPPER */
+
+.travel_site_wrapper {
+    margin: auto;
 }
 
-.posts li .name_body {
-    flex-basis: 85%;
+/* CONTAINER */
+.travel_site,
+.showcase_container,
+.natural_wonders_container,
+.tourist_attractions_container,
+.video_container,
+.newsletter_container,
+.map_container,
+.contact_footer_container {
+    width: 100%;
 }
 
-.posts li .name_body .name {
+
+/* #########################################################################
+HEADER
+######################################################################### */
+
+.header_container {
+    display: flex;
+    height: 80px;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+}
+
+#logo {
+    width: 25%;
+    text-align: center;
+}
+
+#logo img {
+    width: 140px;
+}
+
+/* NAVBAR */
+#navbar {
+    width: 75%;
+}
+
+.links {
+    display: flex;
+}
+
+.links li {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    list-style: none;
+    margin: auto;
+}
+
+.nav_link {
+    color: #303134;
+}
+
+.nav_link:focus {
+    color: #67DCDA;
+}
+
+
+
+/* #########################################################################
+SHOWCASE
+######################################################################### */
+
+.showcase_container {
+    padding-bottom: 0;
+    /* position: relative; */
+}
+
+.showcase {
+    /* tbd */
+    display: flex;
+    margin: auto;
+    position: relative;
+}
+
+.showcase .banner_img {
+    width: 100%;
+}
+
+/* SHOWCASE CONTENT */
+
+.showcase_content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    margin-bottom: 15px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 100%;
+}
+
+.showcase_content h1 {
+    font-family: 'Coolvetica', sans-serif;
+    font-size: 75px;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+/* Search Input */
+.showcase_content .search {
+    margin: auto;
+    position: relative;
+    width: 43%;
+}
+
+.showcase_content .search .search_input {
+    border: none;
+    border-radius: 8px;
+    line-height: 20px;
+    padding: 20px 30px 20px;
+    width: 100%;
+}
+.showcase_content input::placeholder {
+    color: #a5a5a5;
+    font-family: 'Raleway', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.search_icon {    
+    cursor: pointer;
+    width: 30px;
+    position: absolute;
+    right: 30px;
+    bottom: 18px;
+}
+
+.mouse {
+    left: 50%;
+    bottom: 0;
+    padding-bottom: 10px;
+    transform: translate(-50%);
+    position: absolute; 
+}
+
+.mouse img {
+    width: 20px;
+}
+
+
+/* #########################################################################
+NATURAL WONDERS
+######################################################################### */
+
+
+.natural_wonders {    
+    margin: auto;
+    padding-top: 10px;
+    text-align: center;
+}
+
+
+/* Natural Wonders Slide */
+
+.natural_wonders_slides {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.natural_wonders_slides .wonders_img {
+    margin: 10px;
+}
+
+.natural_wonders_slides .wonders_img:hover {
+    cursor: pointer;
+    transform: scale(1.4);
+}
+
+.natural_wonders_slides .wonders_img  img {
+    width: 100%;
+}
+
+.natural_wonders_slides .wonders_img p {
+    text-transform: capitalize;
+}
+
+/* #########################################################################
+TOURIST ATTRACTIONS
+######################################################################### */
+
+/* Heading */
+.tourist_attractions {
+    margin: auto;
+    padding-top: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+.tourist_attractions_cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 10px;
+    margin: auto;
+    margin-top: 20px;
+    max-width: 1200px;
+    padding: 1rem;
+}
+
+
+/* Cards */
+.attractions_card .card_img  {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    margin: auto;
+    height: 600px;
+    transition: 0.3s;
+    position: relative;
+}
+
+.card_img > img {
+    width: 100%;
+}
+
+.card_img .like {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* Text */
+.card_img_text {
+    text-align: left;
+    padding: 10px;
+    margin: 20px;
+}
+
+.card_img_text h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 23px;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
-.posts li .name_body .body {
-    margin: 10px 0px;
+.card_img_text p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 20px;
+    width: 100%;
 }
 
-.posts li .name_body .datetime {
-    color: gray;
-    margin-bottom: 10px;
+/* #########################################################################
+VIDEO
+######################################################################### */
+
+.video_container {
+    height: 500px;
+    position: relative;
 }
 
-.no-post {
+/* Video: Background */
+
+.video_bg .bg_img {
+    height: 500px;
+    max-width: 100%;
+}
+
+/* Video: Top */
+.video_top {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+
+/* Text */
+.video_top_text {
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
     text-align: center;
 }
 
-.no-post p {
-    margin: 0px 0px;
+.video_top_text h3 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 37px;
+    text-transform: uppercase;
+}
+.video_top_text p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 37px;
 }
 
-.loading {
+.video_top .top_img {
+    border-bottom: 3px solid #67DCDA;
+    cursor: pointer;
+    width: 100%;
+    padding-bottom: 0;
+}
+
+/* #########################################################################
+NEWSLETTER
+######################################################################### */
+
+.newsletter_container {
+    position: relative;
+}
+
+
+.newsletter img {
+    width: 100%;
+}
+
+/* Text */
+.newsletter_text {
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 580px;
+    position: absolute;
+}
+
+.newsletter_text h3 {
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 37px;
+}
+
+.newsletter_text p {
+    font-weight: 500;
+    line-height: 37px;
+    padding: 10px 0;
+}
+
+/* Input */
+
+.newsletter_input input{
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 500px;
+    line-height: 37px;
+    margin-right: 5px;
+    padding-left: 20px;
+    width: 400px;
+}
+
+.newsletter_input input::placeholder {
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+/* Subscribe Button */
+
+.newsletter_input .subscribe {
+    background-color: #fff;
+    border: #fff;
+    color: #08AEEA;
+    cursor: pointer;
+    border-radius: 500px;
+    line-height: 37px;
+    margin-left: 5px;
+    text-transform: uppercase;
+    width: 160px;
+}
+/* #########################################################################
+MAP
+######################################################################### */
+
+.map img {
+    width: 100%;
+}
+
+/* #########################################################################
+FOOTER
+######################################################################### */
+
+/* Contact Footer */
+.contact_footer_container {
+    background-color: #141418;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.contact_footer_container .quick_links h4,
+.contact_footer_container .contact_address h4 {
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Quick Links */
+.quick_links {
+    line-height: 40px;
+    margin-left: 20px;
+}
+
+.quick_links .page_links li {
+    list-style: none;
+}
+
+.quick_links .page_links li a {
+    color: #fff;
+    font-family: "Raleway", sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+/* Address */
+.contact_address {
+    line-height: 40px;
+    margin-left: 10px;
+}
+
+.contact_address address {
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Newsletter Email */
+.newsletter_email {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    width: 300px;
+    position: relative;
+    height: 85px;
+    margin-right: 0;
+    margin-top: 40px;
+}
+
+.newsletter_email p {
+    font-size: 15px;
+}
+.newsletter_email input {
+    line-height: 34px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+/* arrow */
+.newsletter_email .arrow  {
+    position: absolute;
+    width: 40px;
+    right: 2px;
+    top: 40px;
+}
+
+.newsletter_email input::placeholder {
+    color: #353030;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    padding-left: 10px;
+}
+/* Site Footer */
+footer {
+    color: #fff;
+    border-top: 1px solid #e8e8e8;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    align-content: center;
+    padding: 20px 0;
+}
+
+
+
+/* #########################################################################
+TRAVEL SITE: DETAILS PAGE
+######################################################################### */
+
+/* #########################################################################
+DETAILS: SHOWCASE
+######################################################################### */
+
+.details_showcase {
+    display: flex;
+    position: relative;
+}
+
+.details_showcase .single_banner_img {
+    width: 100%;
+}
+
+/* DETAILS SHOWCASE CONTENT */
+
+.details_showcase_content {
+    width: 70%;
+    bottom: 20px;
+    right: 40px;
+    position: absolute;
     text-align: center;
 }
+
+/* Images Container */
+.details_showcase .showcase_images {
+    display: flex;
+    justify-content: end;
+    width: 100%;
+}
+.details_showcase .showcase_images .location_img:nth-child(odd) {
+    margin: 0 20px;
+}
+
+/* Images */
+.details_showcase_content .arrow_img {
+    align-self: end;
+    height: 24px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.showcase_images img {
+    cursor: pointer;
+    width: 100%;
+}
+
+
+
+
+/* #########################################################################
+DETAILS: DESCRIPTION
+######################################################################### */
+
+
+.details_description {
+    margin: auto;
+    max-width: 1200px;
+    padding-bottom: 20px;
+}
+
+/* Heading */
+.details_description .title {
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 30px;
+    margin: 20px 0;
+}
+
+/* Text */
+.details_description_text p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
+/* #########################################################################
+DETAILS: MAP
+######################################################################### */
+
+.details_map_container {
+    width: 100%;
+}
+
+.details_map img {
+    width: 100%;
+}
+
+/* #########################################################################
+DETAILS: FOOTER
+######################################################################### */
