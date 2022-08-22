@@ -1,86 +1,104 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, {  useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Loading from '../assets/img/loading.gif';
-import postImage from '../assets/img/newspaper-icon-png.jpg';
-import PostForm from '../components/Posts/PostForm';
-import Post from '../components/Posts/Post';
-import { fetchPosts } from '../reducks/posts/operations';
-import { getPosts } from '../reducks/posts/selectors';
 
+import { getPlaces } from '../reducks/places/selectors';
+
+import { getCategories } from '../reducks/categories/selectors';
+
+import { fetchPlaces } from '../reducks/places/operations';
+
+import { fetchCategories } from '../reducks/categories/operations';
+
+import { fetchFromLocaleStorage } from '../reducks/favourites/operations';
+
+// Import search icon
+import Imgsearch from '../assets/img/search-icon.svg';
+import Showcase from '../assets/img/banner-home.png';
+import mouse from '../assets/img/mouse-down.svg';
+import wave from '../assets/img/border-heading.svg';
+
+import Header from '../components/common/Header';
+import Search from '../components/common/Search';
+import GridContent from '../components/common/GridContent';
+import Thumbnail from '../components/common/Thumbnail';
+import Video from '../components/common/Video';
+import Offer from '../components/common/Offer';
+import Map from '../components/common/Map';
+import Footer from '../components/common/Footer';
+
+
+// Home Container
 const Home = () => {
     const dispatch = useDispatch();
     const selector = useSelector(state => state);
-    const posts = getPosts(selector);
-    let [page, setPage] = useState(1);
-    const [isLoading, setIsLoading] = useState(false);
+    const places = getPlaces(selector);
+
 
     useEffect(() => {
-        dispatch(fetchPosts({ page }));
-        // eslint-disable-next-line
+        dispatch(fetchPlaces());
     }, []);
 
-    // Infinite Scroll Pagination Flow
-    const observer = useRef();
+    const categories = getCategories(selector);
 
-    // Reference to a very last post element
-    const lastPostElement = useCallback(
-        node => {
-            if (isLoading) return;
-            // Disconnect reference from previous element, so that new last element is hook up correctly
-            if (observer.current) {
-                observer.current.disconnect();
-            }
+    useEffect(() => {
+        dispatch(fetchCategories());
+        dispatch(fetchFromLocaleStorage())
+    }, []);
 
-            // Observe changes in the intersection of target element
-            observer.current = new IntersectionObserver(async entries => {
-                // That means that we are on the page somewhere, In our case last element of the page
-                if (entries[0].isIntersecting && posts.next) {
-                    // Proceed fetch new page
-                    setIsLoading(true);
-                    setPage(++page);
-                    await dispatch(fetchPosts({ page }));
-                    setIsLoading(false);
-                }
-            });
-
-            // Reconnect back with the new last post element
-            if (node) {
-                observer.current.observe(node);
-            }
-        },
-        // eslint-disable-next-line
-        [posts.next]
-    );
-
+    
     return (
-        <section className="content">
-            <PostForm />
-            <section className="posts">
-                {posts.results.length > 0 ? (
-                    <ul>
-                        {posts.results.map((post, index) => {
-                            return (
-                                <Post
-                                    ref={index === posts.results.length - 1 ? lastPostElement : null}
-                                    key={post.id}
-                                    post={post}
-                                />
-                            );
-                        })}
-                    </ul>
-                ) : (
-                    <div className="no-post">
-                        <img width="72" src={postImage} alt="icon" />
-                        <p>No posts here yet...</p>
+        <>
+            <Header />
+            <main class="travel_site">
+                {/* <!-- Showcase --> */}
+                <section class="showcase_container">
+                    <div class="showcase">
+                        <img class="banner_img" src={Showcase} alt="" />
+                        <div class="showcase_content">
+                            <h1>Happiest place on Earth!</h1>
+                            <Search img={Imgsearch} alt='' />
+                        </div>
+                        <div class="mouse">
+                            <img src={mouse} alt="" />
+                        </div>
                     </div>
-                )}
-                {isLoading && (
-                    <div className="loading">
-                        <img src={Loading} className="" alt="" />
+                </section>
+                {/* <!-- Natural Wonders --> */}
+                <section class="natural_wonders_container">
+                    <div class="natural_wonders">
+                        <h2>Natural Wonders in Europe</h2>
+                        <img src={wave} alt="" />
+                        <div class="natural_wonders_slides">
+                            {/* <div class="wonders_img">
+                                <img src="images/plitvice-lake.png" alt="">
+                            </div> */}
+                            {categories.map((category) => (
+                                <GridContent key={category.id} category={category} />
+                            ))}
+                            
+                        </div>
                     </div>
-                )}
-            </section>
-        </section>
+                </section>
+                {/* <!-- Tourist Attractions --> */}
+                <section class="tourist_attractions_container">
+                    <div class="tourist_attractions">
+                        <h2>Tourist Attractions in Europe</h2>
+                        <img src={wave} alt="" />
+                        {places.map((place) => (
+                            <Thumbnail place={place}/>
+                        ))}
+                    </div>
+                </section>
+                {/* <!-- Video Section --> */}
+                <Video />
+                {/* <!-- Newsletter --> */}
+                <Offer />
+                {/* <!-- Map --> */}
+                <Map />
+                {/* <!-- Footer --> */}
+                <Footer />
+            </main>
+        </>
     );
 };
 

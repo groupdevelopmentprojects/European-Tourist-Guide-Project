@@ -1,80 +1,43 @@
-import React, { useRef } from 'react';
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import React, { useEffect } from "react";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
 
-import { addPost } from '../../reducks/posts/operations';
+import { addPost } from "../../reducks/posts/operations";
 
 const PostForm = () => {
-    const dispatch = useDispatch();
-    const initialValues = { name: '', body: '' };
-    const [values, setValues] = useState(initialValues);
-    const [previewImage, setPreviewImage] = useState(null);
-    const [image, setImage] = useState([]);
-    const [isLoading, setIsLoading] = useState(false);
-    const inputFile = useRef(null);
+  const dispatch = useDispatch();
 
-    const handleInputChange = e => {
-        const { name, value } = e.target;
-        setValues({ ...values, [name]: value });
-    };
+  const [name, setName] = useState(""),
+    [body, setBody] = useState(""),
+    [image, setImage] = useState([]);
 
-    const inputImage = event => {
-        const file = event.target.files[0];
-        const objectUrl = URL.createObjectURL(file);
-        setPreviewImage(objectUrl);
-        setImage(file);
-    };
+  const inputName = (event) => {
+    setName(event.target.value);
+  };
 
-    const addPostButton = async () => {
-        if (!values.name.trim() || !values.body.trim()) {
-            alert(`Please fill out all required form.`);
-            return;
-        }
-        setIsLoading(true);
+  const inputBody = (event) => {
+    setBody(event.target.value);
+  };
 
-        await dispatch(addPost({ name: values.name, body: values.body, image }));
+  const inputImage = (event) => {
+    setImage(event.target.files[0]);
+  };
 
-        setIsLoading(false);
-        setValues({ name: '', body: '' });
-        setPreviewImage(null);
-        setImage([]);
-        inputFile.current.value = '';
-    };
+  const addPostButton = () => {
+    dispatch(addPost(name, body, image));
+    setName("");
+    setImage([]);
+    setBody("");
+  };
 
-    return (
-        <section className="post_form">
-            <input
-                type="text"
-                name="name"
-                value={values.name}
-                placeholder="Name"
-                onChange={handleInputChange}
-                required
-            />
-            <textarea
-                name="body"
-                value={values.body}
-                placeholder="Tell us anything"
-                onChange={handleInputChange}
-                required
-            ></textarea>
-            <input type="file" ref={inputFile} onChange={inputImage} />
-            {previewImage && (
-                <div className="upload-area">
-                    <img
-                        name="image"
-                        type="file"
-                        src={previewImage}
-                        className={`upload-image ${previewImage ? 'preview-image' : ''}`}
-                        alt="Upload"
-                    />
-                </div>
-            )}
-            <button type="button" onClick={addPostButton}>
-                {isLoading ? 'Posing...' : 'Post'}
-            </button>
-        </section>
-    );
+  return (
+    <section class="post_form">
+      <input type="text" name="name" placeholder="Name" onChange={inputName} required />
+      <textarea name="body" placeholder="Tell us anything" onChange={inputBody} required></textarea>
+      <input name="image" type="file" onChange={inputImage} />
+      <input type="submit" value="Post" onClick={addPostButton} />
+    </section>
+  );
 };
 
 export default PostForm;

@@ -20,15 +20,11 @@ const Map = ({ place }) => {
 
   return (
     <>
-        <div className="travel_site_wrapper">
-            <main className="travel_site">
-                <section class="map_container">
-                    <div class="map">
-                        <img src={map} alt="" />
-                    </div>
-                </section>    
-            </main>
-        </div>
+        <section class="map_container">
+            <div class="map">
+                <img src={map} alt="" />
+            </div>
+        </section> 
     </>
   );
 };

@@ -20,6 +20,7 @@ const Prev = ({ category }) => {
   return (
     <>
         <img src={category.image} alt="" />
+        {/* NEEDS TO BE STYLED */}
         <a onClick={() => dispatch(push('/'))}>
             <img src={close} alt="" className='close'/>
         </a>

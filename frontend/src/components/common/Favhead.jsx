@@ -1,4 +1,4 @@
-// THIS FILE IS USED FOR THE HEADER COMPONENT
+// THIS FILE IS USED FOR THE FAVE HEADER COMPONENT
 
 // Import React, ...
 import React, { useState } from "react";
@@ -12,19 +12,19 @@ import ImgLogo from '../../assets/img/european-logo.svg';
 import Menu from '../../assets/img/menu-icon.svg'
 
 
-// Create Header component
-const Header = () => {
+// Create Favhead component
+const Favhead = () => {
     const dispatch = useDispatch();
 
-    // const [color, setColor] = useState('black');
+    const [color, setColor] = useState('black');
 
-    // const myStyle = {
-    //     color: color,
-    // }
+    const myStyle = {
+        color: color,
+    }
 
-    // let changeColor = () => {
-    //     color !== '#08aeea' ? setColor('#08aeea') : setColor('black');
-    // }
+    let changeColor = () => {
+        color !== '#08aeea' ? setColor('#08aeea') : setColor('black');
+    }
 
     return (
         <>
@@ -69,4 +69,4 @@ const Header = () => {
 };
 
 // Export Header
-export default Header;
+export default Favhead;

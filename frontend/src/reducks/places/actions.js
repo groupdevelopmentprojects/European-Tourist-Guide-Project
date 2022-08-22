@@ -12,7 +12,7 @@ export const addPlaceAction = (places) => {
 // EXPORT FETCH PLACE
 export const FETCH_PLACE = 'FETCH_PLACE';
 // EXPORT fetchPlacesAction for use in other files
-export const fetchPlaceAction = (places) => {
+export const fetchPlacesAction = (places) => {
     return {
         type: FETCH_PLACE,
         payload: places

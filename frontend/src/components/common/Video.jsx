@@ -15,23 +15,19 @@ import play from '../../assets/img/play-button.png';
 function Video() {
   return (
     <>
-        <div className="travel_site_wrapper">
-            <main className="travel_site">
-                <section className="video_container">
-                    <div className="video_bg">
-                        <img className="bg_img" src={bgVideo} alt="" id='bg_video'/>
-                    </div>
-                        <div className="video_top">
-                            <div className="video_top_text">
-                                <h3>Discover</h3>
-                                <p>Watch Our Video Tour</p>
-                                <img className="top_img_wave" src={videoWave} alt="" />
-                            </div>
-                            <img className="top_img" src={play} alt="" id='play_button'/>
-                        </div>
-                </section>  
-            </main>
-        </div>
+        <section className="video_container">
+            <div className="video_bg">
+                <img className="bg_img" src={bgVideo} alt="" id='bg_video'/>
+            </div>
+            <div className="video_top">
+                <div className="video_top_text">
+                    <h3>Discover</h3>
+                    <p>Watch Our Video Tour</p>
+                    <img className="top_img_wave" src={videoWave} alt="" />
+                </div>
+                <img className="top_img" src={play} alt="" id='play_button'/>
+            </div>
+        </section>  
     </>
   )
 }
