@@ -53,9 +53,9 @@ function Details() {
                     <img class="single_banner_img" src={Details.image} alt="" />
                     <div class="details_showcase_content">
                         <div class="showcase_images">
-                               <div class="arrow_img">
-                                    <img  src="images/arrow-places.svg" alt="" />
-                               </div>
+                            <div class="arrow_img">
+                                <img  src="images/arrow-places.svg" alt="" />
+                            </div>
                             
                             {places.map((place) => (
                                 <Categorycard place={place} />  

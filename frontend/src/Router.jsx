@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Switch } from "react-router";
-import Map from "./components/common/Map";
+
+// Import Containers
 import Details from "./containers/Details";
 import Favourites from "./containers/Favourites";
 import Home from "./containers/Home";
