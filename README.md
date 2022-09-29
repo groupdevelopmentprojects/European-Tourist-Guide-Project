@@ -1,7 +1,7 @@
-# Forum App in React & Redux + Django
+# European Tourist Guide
 
 ```
-Forum App, with a frontend built in React & Redux and a backend built in Django API.
+European Tourist Guide, with a frontend built in React & Redux and a backend built in Django API.
 ```
 
 ## Live Demo
